@@ -7,7 +7,7 @@ Usage
 It's pretty simple: call `Connect` or `Listen` and get a `[]byte` channel back!
 
 ```go
-inbound, err := Listen(":9999", done)
+inbound, err := Listen(":9999", nil)
 if err != nil {
 	// handle err
 }
