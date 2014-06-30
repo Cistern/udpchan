@@ -42,7 +42,7 @@ func Connect(address string) (chan<- []byte, error) {
 // If a value is sent to close, the UDP socket will
 // be closed.
 func Listen(address string, close chan bool) (<-chan []byte, error) {
-	udpAddr, err := net.ResolveUDPAddr("udp", ":9999")
+	udpAddr, err := net.ResolveUDPAddr("udp", address)
 	if err != nil {
 		return nil, err
 	}
